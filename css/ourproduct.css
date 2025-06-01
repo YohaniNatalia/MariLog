@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background-color: #7FCAD6; /* Warna biru sesuai gambar */
+    padding: 1.5rem 3rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+   
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem; /* Jarak antar menu */
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a.active {
+    background-color: black;
+    color: white;
+}
+
+.nav-links li a:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+}
+/* Dropdown Styles */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+.nav-links .dropdown-content li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.nav-links .dropdown-content li a:hover {
+    background-color: #444;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.logo {
+    margin-left: auto; 
+}
+
+.logo img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+    max-height: 100%; 
+}
+
+
+body {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    color: white;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.overlay h2 {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+    padding: 10px;
+    display: inline-block;
+}
+
+.overlay p {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+    padding: 10px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.hero-overlay {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul dan Search */
+.product-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-section input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Grid Produk */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.product-card p {
+  font-weight: 600;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Styling umum untuk footer */
+footer {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 20px 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* Container utama untuk menyusun bagian kiri, tengah, dan kanan secara fleksibel */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;  /* agar responsive bila lebar layar mengecil */
+}
+
+/* Bagian kiri: Contact dan ikon */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+}
+
+/* Judul dalam footer */
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+/* Setiap item di footer */
+.footer-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-item i {
+  margin-right: 8px;
+}
+
+.footer-center {
+  flex: 4;
+  min-width: 10px;
+  padding: 10px;
+  width: auto;
+  display: flex;
+  align-items: center; /* pastikan tengah vertikal */
+}
+
+.footer-center-content {
+  display: flex;
+  align-items: center;  /* ikonnya vertikal sejajar dengan teks */
+  gap: 10px;             /* jarak antara ikon dan teks */
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+
+/* Bagian kanan: Copyright */
+.footer-right {
+  flex: 2;
+  min-width: 200px;
+  padding: 10px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  /* Pada layar kecil, tampilkan stack secara vertikal */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}

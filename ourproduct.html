@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Product - PT.MARILOG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/ourproduct.css">
+</head>
+<div>
+    <!-- Header Include -->
+    <div id="header"></div>
+
+     <!-- Hero Section -->
+    <div class="wrapper">
+    <div class="hero" style="background-image: url('images/home1.jpeg'); background-size: cover; background-position: center; height: 100vh; position: relative;">
+    <div class="hero-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+         <div class="product-section">
+          <h2 style="margin-bottom: 20px;">JENIS BARANG</h2>
+
+          <!-- Search Bar & Button -->
+          <div style="display: flex; gap: 10px; margin-bottom: 30px;">
+            <input id="searchInput" type="text" placeholder="SEARCH" style="flex: 1; padding: 10px; font-size: 16px;" />
+            <button onclick="filterProducts()" style="padding: 10px 15px; font-size: 16px; background-color: #2b7bb9; color: white; border: none; border-radius: 8px; cursor: pointer;">
+              Search
+            </button>
+          </div>
+
+          <!-- Pesan Jika Tidak Ada -->
+            <p id="noResultsMessage" style="text-align: center; color: red; font-weight: bold; display: none; margin-bottom: 20px;">
+            Produk tidak ditemukan.
+            </p>
+
+          <!-- Product Grid Container with Scroll -->
+          <div style="max-height: 600px; overflow-y: auto; padding-right: 10px;">
+          <div class="product-grid" id="productGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div class="product-card" data-name="baja"><img src="images/baja.jpg" alt="BAJA" /><p>BAJA</p></div>
+            <div class="product-card" data-name="gas lpg"><img src="images/gas.jpg" alt="GAS LPG" /><p>GAS LPG</p></div>
+            <div class="product-card" data-name="pipa paralon"><img src="images/pipa.jpg" alt="PIPA PARALON" /><p>PIPA PARALON</p></div>
+            <div class="product-card" data-name="kayu balok"><img src="images/balok.jpg" alt="KAYU BALOK" /><p>KAYU BALOK</p></div>
+            <div class="product-card" data-name="kabel"><img src="images/kabel.jpg" alt="KABEL" /><p>KABEL</p></div>
+            <div class="product-card" data-name="semen"><img src="images/semen.jpg" alt="SEMEN" /><p>SEMEN</p></div>
+            <div class="product-card" data-name="peralatan nelayan"><img src="images/jaringnelayan.jpg" alt="PERALATAN NELAYAN" /><p>PERALATAN NELAYAN</p></div>
+            <div class="product-card" data-name="cat tembok"><img src="images/cattembok.jpg" alt="CAT TEMBOK" /><p>CAT TEMBOK</p></div>
+            <div class="product-card" data-name="frozen food"><img src="images/frozen food.jpg" alt="FROZEN FOOD" /><p>FROZEN FOOD</p></div>
+            <div class="product-card" data-name="minyak goreng"><img src="images/minyak_goreng.jpg" alt="MINYAK GORENG" /><p>MINYAK GORENG</p></div>
+            <div class="product-card" data-name="air mineral"><img src="images/air_mineral.webp" alt="AIR MINERAL" /><p>AIR MINERAL</p></div>
+            <div class="product-card" data-name="beras"><img src="images/beras.webp" alt="BERAS" /><p>BERAS</p></div>
+            <div class="product-card" data-name="tepung terigu"><img src="images/tepung.webp" alt="TEPUNG TERIGU" /><p>TEPUNG TERIGU</p></div>
+            <div class="product-card" data-name="mentega"><img src="images/mentega.jpg" alt="MENTEGA" /><p>MENTEGA</p></div>
+            <div class="product-card" data-name="kain kasa"><img src="images/kain kasa.jpg" alt="KAIN KASA" /><p>KAIN KASA</p></div>
+            <div class="product-card" data-name="gula pasir"><img src="images/gulapasir.jpg" alt="GULA PASIR" /><p>GULA PASIR</p></div>
+            <div class="product-card" data-name="bata merah"><img src="images/batumerah.jpg" alt="BATA MERAH" /><p>BATA MERAH</p></div>
+            <div class="product-card" data-name="keju"><img src="images/keju.jpg" alt="KEJU" /><p>KEJU BALOK</p></div>
+            <div class="product-card" data-name="maizena"><img src="images/maizena.jpg" alt="MAIZENA" /><p>TEPUNG MAIZENA</p></div>
+            <div class="product-card" data-name="pupuk"><img src="images/pupuk.jpg" alt="PUPUK" /><p>PUPUK</p></div>
+            <div class="product-card" data-name="bawang merah"><img src="images/bawang merah.jpg" alt="BAWANG MERAH" /><p>BAWANG MERAH</p></div>
+            <div class="product-card" data-name="bawang putih"><img src="images/bawangputih.webp" alt="BAWANG PUTIH" /><p>BAWANG PUTIH</p></div>
+            <div class="product-card" data-name="cabe"><img src="images/cabe.jpg" alt="CABE" /><p>CABE MERAH</p></div>
+            <div class="product-card" data-name="genteng"><img src="images/genteng.jpg" alt="GENTENG" /><p>GENTENG</p></div>
+            <div class="product-card" data-name="kertas"><img src="images/kertas.jpg" alt="KERTAS" /><p>KERTAS</p></div>
+            <div class="product-card" data-name="mentimun"><img src="images/mentimun.jpg" alt="MENTIMUN" /><p>MENTIMUN</p></div>
+            <div class="product-card" data-name="pakaian"><img src="images/pakaian.jpg" alt="PAKAIAN" /><p>PAKAIAN</p></div>
+            <div class="product-card" data-name="telur"><img src="images/telur.jpg" alt="TELUR" /><p>TELUR</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- Footer Include -->
+    <div id="footer"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
